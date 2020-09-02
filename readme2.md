@@ -3,10 +3,10 @@ In this guide, you will set up a Kubernetes cluster from scratch using Ansible a
 
 Your cluster will include the following physical resources:
 
-One master node
+### One master node
 The master node (a node in Kubernetes refers to a server) is responsible for managing the state of the cluster.
 
-Two worker nodes
+### Two worker nodes
 Worker nodes are the servers where your workloads (i.e. containerized applications and services) will run.
 
 Prerequisites
