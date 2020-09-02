@@ -9,11 +9,40 @@ The master node (a node in Kubernetes refers to a server) is responsible for man
 ### Two worker nodes
 Worker nodes are the servers where your workloads (i.e. containerized applications and services) will run.
 
-Prerequisites
+# Prerequisites
 
 - An SSH key pair on your local Linux/macOS/BSD machine (Ansible server).
  
+To generate an RSA key pair on your local computer, type:
+
+
     - ssh-keygen
+    
+	Generating public/private rsa key pair.
+    	Enter file in which to save the key (/home/demo/.ssh/id_rsa):
+	Enter passphrase (empty for no passphrase):
+    	Enter same passphrase again:
+	Your identification has been saved in /root/.ssh/id_rsa.
+	Your public key has been saved in /root/.ssh/id_rsa.pub.
+	The key fingerprint is:
+	8c:e9:7c:fa:bf:c4:e5:9c:c9:b8:60:1f:fe:1c:d3:8a root@here
+	The key's randomart image is:
+	+--[ RSA 2048]----+
+	|                 |
+	|                 |
+	|                 |
+	|       +         |
+	|      o S   .    |
+	|     o   . * +   |
+	|      o + = O .  |
+	|       + = = +   |
+	|      ....Eo+    |
+	+-----------------+
+	
+	his procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
+	
+	~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!
+	~/.ssh/id_rsa.pub: The associated public key. This can be shared freely without consequence.
 	
 - Deployment environment must have Ansible `2.9.12+`
 
