@@ -1,7 +1,4 @@
-In this guide, you will set up a Kubernetes cluster from scratch using Ansible and Kubeadm,
-
-
-Your cluster will include the following physical resources:
+In this guide, you will set up a Kubernetes cluster from scratch using Ansible and Kubeadm, your cluster will include the following physical resources:
 
 ### One master node
 The master node (a node in Kubernetes refers to a server) is responsible for managing the state of the cluster.
@@ -13,15 +10,16 @@ Worker nodes are the servers where your workloads (i.e. containerized applicatio
 
 - An SSH key pair on your local Linux/macOS/BSD machine (Ansible server).
  
-To generate an RSA key pair on your local computer, type:
+	- To generate an RSA key pair on your local computer, type:
 
-
-    - ssh-keygen
+```sh
+$ ssh-keygen
     
 	Generating public/private rsa key pair.
     	Enter file in which to save the key (/home/demo/.ssh/id_rsa):
 	Enter passphrase (empty for no passphrase):
     	Enter same passphrase again:
+	
 	Your identification has been saved in /root/.ssh/id_rsa.
 	Your public key has been saved in /root/.ssh/id_rsa.pub.
 	The key fingerprint is:
@@ -38,6 +36,10 @@ To generate an RSA key pair on your local computer, type:
 	|       + = = +   |
 	|      ....Eo+    |
 	+-----------------+
+```
+
+```sh
+    
 	
 	his procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
 	
