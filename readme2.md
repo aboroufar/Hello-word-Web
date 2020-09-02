@@ -88,8 +88,6 @@ Verify cluster is fully running, SSH into master node with the following command
 ```sh
 $ ssh ubuntu@master_ip
 
-```
-
 $ kubectl get node
 NAME      STATUS    AGE       VERSION
 master1   Ready     22m       v1.8.3
