@@ -72,7 +72,7 @@ Setting Up the Workspace Directory and Ansible Inventory File
 
 	**Note:** Depending on your setup, you may need to modify `cni_opts` to an available network interface. By default, `kubeadm-ansible` uses `eth1`. Your 			  default interface may be `eth0`.
 
-
+# Installation
 
 After going through the setup, run the `main-playbook.yaml` playbook:
 
@@ -81,7 +81,7 @@ $ ansible-playbook main-playbook.yaml
 
 ```
 
-
+# Verification
 
 Verify cluster is fully running, SSH into master node with the following command and using kubectl:
 
@@ -90,10 +90,6 @@ $ ssh ubuntu@master_ip
 
 ```
 
-```sh
-
-
-```
 $ kubectl get node
 NAME      STATUS    AGE       VERSION
 master1   Ready     22m       v1.8.3
