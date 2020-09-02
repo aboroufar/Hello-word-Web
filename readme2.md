@@ -47,29 +47,19 @@ $ ssh-keygen
 - Deployment environment must have Ansible `2.9.12+`
 - Three servers running Ubuntu 18.04 with at least 4GB RAM and 2 vCPUs each. You should be able to SSH into each server as the root user.
 
- 
-Step 1 — Setting Up the Workspace Directory and Ansible Inventory File
-
-
-Build a Kubernetes cluster using Ansible with kubeadm. The goal is easily install a Kubernetes cluster on machines running:
-
-  - Ubuntu 18.04
-  
-  
-System requirements:
-
-  - Deployment environment must have Ansible `2.9.12+`
-  - Master and nodes must have SSH access
 
 # Usage
 
-Add the system information gathered above into a file called `hosts.ini`. For example:
+Setting Up the Workspace Directory and Ansible Inventory File
+ 
+	Add the system information including hostname and IP address gathered above into a file called `hosts.ini`. For example:
 ```
-[master]
-192.168.17.10
+[kubernetes_master_nodes]
+master01 ansible_host=192.167.18.10
 
-[node]
-192.168.17.11
+[kubernetes_worker_nodes]
+worker01 ansible_host=192.167.18.11
+worker02 ansible_host=192.167.18.12
 
 ```
 
