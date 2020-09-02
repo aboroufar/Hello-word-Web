@@ -39,7 +39,7 @@ $ ssh-keygen
 ```
     
 	
-This procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
+	This procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
 	
 	~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!
 	~/.ssh/id_rsa.pub: The associated public key. This can be shared freely without consequence.
