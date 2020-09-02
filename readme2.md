@@ -37,17 +37,14 @@ $ ssh-keygen
 	|      ....Eo+    |
 	+-----------------+
 ```
-
-```sh
     
 	
-	his procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
+This procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
 	
 	~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!
 	~/.ssh/id_rsa.pub: The associated public key. This can be shared freely without consequence.
 	
 - Deployment environment must have Ansible `2.9.12+`
-
 - Three servers running Ubuntu 18.04 with at least 4GB RAM and 2 vCPUs each. You should be able to SSH into each server as the root user.
 
  
