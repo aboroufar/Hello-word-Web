@@ -51,40 +51,36 @@ $ ssh-keygen
 # Usage
 
 Setting Up the Workspace Directory and Ansible Inventory File
- 
-	Add the system information including hostname and IP address gathered above into a file called `hosts.ini`. For example:
-```
-[kubernetes_master_nodes]
-master01 ansible_host=192.167.18.10
+	
+  	Add the system information including hostname and IP address gathered above into a file called `hosts.ini`. For example:
+		
+		[kubernetes_master_nodes]
+		master01 ansible_host=192.167.18.10
 
-[kubernetes_worker_nodes]
-worker01 ansible_host=192.167.18.11
-worker02 ansible_host=192.167.18.12
+		[kubernetes_worker_nodes]
+		worker01 ansible_host=192.167.18.11
+		worker02 ansible_host=192.167.18.12
 
-```
 
-```
+	Before continuing, edit `group_vars/all.yml` to your specified configuration.
 
-Before continuing, edit `group_vars/all.yml` to your specified configuration.
+		For example, you are able to change the cluster IP address, and thus:
 
-For example, you are able to change the cluster IP address, and thus:
+			api_addr: 192.167.18.10
+			service_cidr: "10.96.0.0/12"
+			pod_network_cidr: "10.10.0.0/16"
 
-api_addr: 192.167.18.10
-service_cidr: "10.96.0.0/12"
-pod_network_cidr: "10.10.0.0/16"
-
-**Note:** Depending on your setup, you may need to modify `cni_opts` to an available network interface. By default, `kubeadm-ansible` uses `eth1`. Your default interface may be `eth0`.
+	**Note:** Depending on your setup, you may need to modify `cni_opts` to an available network interface. By default, `kubeadm-ansible` uses `eth1`. Your 			  default interface may be `eth0`.
 
 
 
-After going through the setup, run the `site.yaml` playbook:
+After going through the setup, run the `main-playbook.yaml` playbook:
 
 ```sh
 $ ansible-playbook main-playbook.yaml
 
 ```
 
-```sh
 
 
 Verify cluster is fully running, SSH into master node with the following command and using kubectl:
