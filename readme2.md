@@ -7,7 +7,8 @@ The master node (a node in Kubernetes refers to a server) is responsible for man
 Worker nodes are the servers where your workloads (i.e. containerized applications and services) will run.
 
 # Prerequisites
-
+- Network configuration (IP address, DNS)
+- Enabaled root account with the same password as indicated in playbook
 - An SSH key pair on your local Linux/macOS/BSD machine (Ansible server).
  
 	- To generate an RSA key pair on your local computer, type:
