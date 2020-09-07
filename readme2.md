@@ -73,7 +73,7 @@ Setting Up the Workspace Directory and Ansible Inventory File
 
 	**Note:** Depending on your setup, you may need to modify `cni_opts` to an available network interface. By default, `kubeadm-ansible` uses `eth1`. Your 			  default interface may be `eth0`.
 	
-	If Kubernetes Cluster is behind the Corporate Proxy, you should set 'proxy_install: True', otherwise 'false'.
+	If Kubernetes Cluster is behind the Corporate Proxy, you should set <strong>'proxy_install: True'</strong>, otherwise 'false'.
   
 
 # Installation
