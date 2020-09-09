@@ -51,7 +51,7 @@ $ ssh-keygen
 
 # Usage
 
-Setting Up the Workspace Directory and Ansible Inventory File
+- Setting Up the Workspace Directory and Ansible Inventory File
 	
   Add the system information including hostname and IP address gathered above into a file called **hosts.ini**. For example:
 		
@@ -63,17 +63,24 @@ Setting Up the Workspace Directory and Ansible Inventory File
 		worker02 ansible_host=192.167.18.12
 
 
-Before continuing, edit **group_vars/all.yml** to your specified configuration:
+- Before continuing, edit **group_vars/all.yml** to your specified configuration:
 
 		For example, you are able to change the cluster IP address, and thus:
-
+			
+			DNS_Server: 163.162.4.70
 			api_addr: 192.167.18.10
 			service_cidr: "10.96.0.0/12"
 			pod_network_cidr: "10.10.0.0/16"
 
-**Note:** Depending on your setup, you may need to modify **cni_opts** to an available network interface. By default, **kubeadm-ansible** uses **eth1**. Your 			  default interface may be **eth0**.
+**Note:** Depending on your setup, you may need to modify **cni_opts** to an available network interface. By default, **kubeadm-ansible** uses **eth1**. Your 
+          default interface may be **eth0**.
 	
- If Kubernetes Cluster is behind the Corporate Proxy, you should set **proxy_install: True**, otherwise **False**.
+ - If Kubernetes Cluster is behind the Corporate Proxy, you should set **proxy_install: True**, otherwise **False**.
+ 	
+		For example, you are able to change the proxy IP address as follows:
+	
+			http_proxy: http://163.162.95.56:3128
+			https_proxy: http://163.162.95.56:3128
   
 
 # Installation
